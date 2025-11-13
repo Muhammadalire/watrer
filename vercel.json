@@ -1,0 +1,32 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "functions": {
+    "src/api/hydration/route.ts": {
+      "runtime": "nodejs18.x"
+    },
+    "src/api/progress/route.ts": {
+      "runtime": "nodejs18.x"
+    },
+    "src/api/rewards/route.ts": {
+      "runtime": "nodejs18.x"
+    },
+    "src/api/test-email/route.ts": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "RESEND_API_KEY": "@resend_api_key",
+    "NOTIFICATION_EMAIL": "@notification_email"
+  },
+  "build": {
+    "env": {
+      "DATABASE_URL": "@database_url",
+      "RESEND_API_KEY": "@resend_api_key",
+      "NOTIFICATION_EMAIL": "@notification_email"
+    }
+  }
+}
